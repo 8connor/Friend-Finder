@@ -1,7 +1,7 @@
 var express = require("express");
 var path = require("path");
 var obj = require("./app.js");
-var PORT = process.env.NODE || 3000;
+var PORT = process.env.PORT || 3000;
 var app = express();
 
 
