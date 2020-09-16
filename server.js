@@ -1,12 +1,8 @@
 var express = require("express");
 var path = require("path");
 var obj = require("./app.js");
-var PORT = 3000;
+var PORT = process.env.NODE || 3000;
 var app = express();
-
-
-
-
 
 
 app.use(express.urlencoded({ extended: true }));
@@ -68,7 +64,7 @@ app.get("/api/friends", function (req, res) {
 app.post("/api/friends", function (req, res) {
     var newRes = req.body
 
-    
+
     res.json(compareFriends(newRes));
 });
 
